@@ -39,4 +39,10 @@ class TestRoom < MiniTest::Test
         assert_equal(false, @room_1.occupants.include?(@guest_1))
       end
 
+      def test_add_song
+          @room_1.add_song(@song_1)
+          assert_includes(@room_1.song_library, @song_1)
+        end
+
+
 end
